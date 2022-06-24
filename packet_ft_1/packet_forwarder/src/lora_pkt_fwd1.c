@@ -2314,22 +2314,14 @@ void thread_up(void) {
         }
 
 
-//        if( rxpkt->size == 52 ){
-//            uint32_t counteeee = rxpkt->count_us;
-//            uint16_t counteeeee = rxpkt->crc;
-//
-//            /* correction debug */
-//            FILE * log_file = NULL;
-//            time_t now_time;
-//            char log_name[64];
-//
-//            /* initialization */
-//            time(&now_time);
-//            strftime(log_name,sizeof log_name,"xtal_err_%Y%m%dT%H%M%SZ.csv",localtime(&now_time));
-//            log_file = fopen("signals.log", "a");
-//            setbuf(log_file, NULL);
-//            fprintf(log_file,"\nJSON uppe: %s\n", (char *)(buff_up + 12)); // DEBUG
-//        }
+        if( rxpkt->size == 52 && rxpkt->payload[0] > 0 ){
+            if(((int)strlen((char *)(buff_up + 12))) > 113){
+                FILE * log_file = NULL;
+                log_file = fopen("/home/ft/logs/signals.log", "a");
+                setbuf(log_file, NULL);
+                fprintf(log_file,"\nJSON UP-1: %s\n", (char *)(buff_up + 12)); // DEBUG
+            }
+        }
 
         /* send datagram to server */
         send(sock_up, (void *)buff_up, buff_index, 0);
