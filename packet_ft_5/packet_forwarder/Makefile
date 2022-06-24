@@ -29,8 +29,8 @@ RELEASE_VERSION := `cat ../VERSION`
 CC := $(CROSS_COMPILE)gcc
 AR := $(CROSS_COMPILE)ar
 
-#CFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc $(DEBUG_CFLAGS)
-CFLAGS := -O0 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc $(DEBUG_CFLAGS)
+CFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc 
+#CFLAGS := -O0 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc $(DEBUG_CFLAGS)
 VFLAG := -D VERSION_STRING="\"$(RELEASE_VERSION)\""
 
 ### Constants for Lora concentrator HAL library

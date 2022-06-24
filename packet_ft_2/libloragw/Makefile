@@ -13,7 +13,8 @@ AR := $(CROSS_COMPILE)ar
 
 DEBUG_CFLAGS  := -g
 
-CFLAGS := -O0 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc $(DEBUG_CFLAGS)
+#CFLAGS := -O0 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc $(DEBUG_CFLAGS)
+CFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc
 
 OBJDIR = obj
 INCLUDES = $(wildcard inc/*.h) $(wildcard ../libtools/inc/*.h)
