@@ -2,11 +2,11 @@ echo 'START...'
 
 echo 'HERŞEY BAŞTAN KURULUYOR SAKİN OL :) ...'
 
-ftfolder=/home/ft
-if [ -d "$ftfolder" ]; then
-	echo 'FT KLASORU SILINIYOR ...'
-	rm -rf /home/ft/
-fi
+# ftfolder=/home/ft
+# if [ -d "$ftfolder" ]; then
+	# echo 'FT KLASORU SILINIYOR ...'
+	# rm -rf /home/ft/
+# fi
 
 # ftfolder1=/home/ft_sensecap
 # if [ -d "$ftfolder1" ]; then
