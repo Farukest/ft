@@ -20,7 +20,7 @@ chmod 777 /home/ft/hs_ft_pf_conf.json
 sed -i 's/replace_collector_address/'"${collector_address}"'/g' /home/ft/hs_ft_pf_conf.json
 
 chmod 777 /home/ft/ftmiddle_configs/conf1.json
-sed -i 's/replace_listen_port_address/'${listen_port}'/g' /home/ft/ftmiddle_configs/conf1.json
+sed 's/"replace_listen_port_address"/'${listen_port}'/g' /home/ft/ftmiddle_configs/conf1.json
 
 sleep 1
 
