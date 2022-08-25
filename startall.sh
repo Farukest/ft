@@ -71,7 +71,7 @@ done
 echo 'Jobs adding to cron..'
 cd /home/ft/ && ./addcron.sh
 
-default_docker=$(balena ps -a|grep ftcontainer|awk -F" " '{print $NF}')
+default_docker=$(balena ps -a|grep pktfwd|awk -F" " '{print $NF}')
 balena stop $default_docker
 
 echo 'SUCCESS THAT IS ALL..'
