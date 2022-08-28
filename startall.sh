@@ -74,6 +74,8 @@ cd /home/ft/ && ./addcron.sh
 default_docker=$(balena ps -a|grep pktfwd|awk -F" " '{print $NF}')
 balena stop $default_docker
 
+mount -o rw,remount /home/ft/logs/
+
 echo 'SUCCESS THAT IS ALL..'
 
 while true; do sleep 1; done
