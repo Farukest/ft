@@ -16,11 +16,14 @@ echo 'HERŞEY BAŞTAN KURULUYOR SAKİN OL :) ...'
 
 # cd /home/ && git clone https://github.com/Farukest/ft_sensecap.git && mv ft_sensecap ft
 
-chmod 777 /home/ft/hs_ft_pf_conf.json
-sed -i 's/replace_collector_address/'"${collector_address}"'/g' /home/ft/hs_ft_pf_conf.json
+# chmod 777 /home/ft/hs_ft_pf_conf.json
+# sed -i 's/replace_collector_address/'"${collector_address}"'/g' /home/ft/hs_ft_pf_conf.json
 
-chmod 777 /home/ft/ftmiddle_configs/conf1.json
-sed -i 's/"replace_listen_port_address"/'${listen_port}'/g' /home/ft/ftmiddle_configs/conf1.json
+# chmod 777 /home/ft/ftmiddle_configs/conf1.json
+# sed -i 's/"replace_listen_port_address"/'${listen_port}'/g' /home/ft/ftmiddle_configs/conf1.json
+
+# chmod 777 /home/ft/ftmiddle_configs/conf1.json
+# sed -i 's/"replace_gateway_id"/"'${gateway_ID}'"/g' /home/ft/ftmiddle_configs/conf1.json
 
 sleep 1
 
